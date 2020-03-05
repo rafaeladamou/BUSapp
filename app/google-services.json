@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "398751966582",
+    "firebase_url": "https://focus-melody-269614.firebaseio.com",
+    "project_id": "focus-melody-269614",
+    "storage_bucket": "focus-melody-269614.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398751966582:android:3404f90be4c60f5e274657",
+        "android_client_info": {
+          "package_name": "com.example.buzzapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "398751966582-s1v44kbvk7nrsk4ohgqu92d8nqilco7h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwpG5iH3ozPupFqgiC99VwICry8P_9IYc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "398751966582-s1v44kbvk7nrsk4ohgqu92d8nqilco7h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

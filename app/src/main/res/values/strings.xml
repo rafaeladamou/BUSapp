@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string-array name="bus_stops">
+        <item>University of Portsmouth</item>
+        <item>Elm Grove, The Thicket</item>
+        <item>Kings Theatre</item>
+        <item>Festing Hotel</item>
+        <item>Eastney Health Centre</item>
+        <item>Bransbury Park</item>
+        <item>Prince Albert Road</item>
+        <item>Francis Avenue, Lidls</item>
+        <item>Fratton Bridge</item>
+        <item>Somers Road</item>
+        <item>Winston Churchill Avenue</item>
+    </string-array>
+</resources>
