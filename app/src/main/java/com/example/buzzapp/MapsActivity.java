@@ -1,6 +1,7 @@
 package com.example.buzzapp;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -71,14 +72,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 String selectedItem1 = parent.getItemAtPosition(position).toString();
                 if(selectedItem1.equals("Maps")){
 
+
                 }
                 if(selectedItem1.equals("Settings")){
+                    //Intent Setty = new Intent (MapsActivity.this , )
 
                 }
                 if(selectedItem1.equals("Help")){
+                   // Intent helpy = new Intent (MapsActivity.this , HelpActivity.class);
+                   // startActivity(helpy);
+
 
                 }
                 if(selectedItem1.equals("Logout")){
+                    Intent Logout = new Intent (MapsActivity.this, LoginActivity.class);
+                    startActivity(Logout);
 
                 }
 
