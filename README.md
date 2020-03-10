@@ -4,9 +4,10 @@
 
  - add the bus stop times
  - get closest bus stop to current location
- - add a settings page
+ * add settings page
    - add dark mode support
    - add option to add favourite bus stops
+   - add option to add bus allarms
  - get estimated time of arrival at final destination (walking time + bus travel time)
  - add side menu that allows user to select settings, maps, logout and help (make slidey with code magic)
 
@@ -17,4 +18,3 @@ FELIX
  // long term todo
 
   - add live/estimated bus positions in real time
-  - make it the best app in histroy
