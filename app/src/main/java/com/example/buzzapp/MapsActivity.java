@@ -47,6 +47,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+        Spinner menu = findViewById(R.id.menu1);
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         Location location = locationManager.getLastKnownLocation(locationManager.NETWORK_PROVIDER);
         onLocationChanged(location);
@@ -56,6 +57,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //place1 = new MarkerOptions().position(new LatLng(location.getLatitude(), location.getLongitude())).title("Current Location");
         place0 = new MarkerOptions().position(new LatLng(50.7903937,-1.0682483)).title("Destt");
         //place2 = changeMarker(50.7936502, -1.0978148);
+
+        menu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+
+
+            }
+        });
+
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
         {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
