@@ -15,6 +15,16 @@
         <item>Somers Road</item>
         <item>Winston Churchill Avenue</item>
     </string-array>
+
+    <string-array name="menu1">
+        <item>Maps</item>
+        <item>Settings</item>
+        <item>Help</item>
+        <item>Logout</item>
+    </string-array>
+
+
+
     <string name="title_activity_settings">SideSettings</string>
 
     <!-- Preference Titles -->
