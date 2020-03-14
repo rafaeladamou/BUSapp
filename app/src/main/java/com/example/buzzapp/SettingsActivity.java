@@ -9,6 +9,8 @@ import android.widget.Spinner;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.auth.FirebaseAuth;
 //import androidx.preference.PreferenceFragmentCompat;
 
 public class SettingsActivity extends AppCompatActivity {
@@ -42,7 +44,10 @@ public class SettingsActivity extends AppCompatActivity {
 
                 }
                 if(selectedItem1.equals("Logout")){
-
+                    FirebaseAuth.getInstance().signOut();
+                    finish();
+                    Intent i = new Intent(SettingsActivity.this, LoginActivity.class);
+                    startActivity(i);
                 }
 
 

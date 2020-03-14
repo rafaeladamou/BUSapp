@@ -23,6 +23,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 
 import java.util.ArrayList;
@@ -83,7 +84,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 }
                 if(selectedItem1.equals("Logout")){
-
+                    FirebaseAuth.getInstance().signOut();
+                    finish();
+                    Intent i = new Intent(MapsActivity.this, LoginActivity.class);
+                    startActivity(i);
                 }
 
 

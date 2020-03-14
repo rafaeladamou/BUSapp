@@ -1,20 +1,16 @@
 package com.example.buzzapp;
 
 import android.content.Intent;
-import android.icu.util.ValueIterator;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Spinner;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-
-
+import com.google.firebase.auth.FirebaseAuth;
 
 
 public class HelpActivity extends AppCompatActivity {
@@ -46,12 +42,13 @@ public class HelpActivity extends AppCompatActivity {
 
                 }
                 if(selectedItem1.equals("Help")){
-                    Intent i = new Intent(HelpActivity.this , HelpActivity.class);
-                    startActivity(i);
 
                 }
                 if(selectedItem1.equals("Logout")){
-
+                    FirebaseAuth.getInstance().signOut();
+                    finish();
+                    Intent i = new Intent(HelpActivity.this, LoginActivity.class);
+                    startActivity(i);
                 }
 
 
