@@ -75,6 +75,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 }
                 if(selectedItem1.equals("Settings")){
+
                     Intent i = new Intent(MapsActivity.this, SettingsActivity.class);
                     startActivity(i);
                 }
