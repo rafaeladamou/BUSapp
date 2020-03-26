@@ -16,6 +16,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+//in this java file we log the user in to his account using firebase database services which was created on CreateAccountActivity.
+//also when user enters wrong credentials it asks him to re enter them
 public class LoginActivity extends AppCompatActivity {
     EditText emailId, pass, inputname, inputsurname;
     Button loginbutton, noaccount;
@@ -33,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         loginbutton = findViewById(R.id.loginbutton);
         noaccount = findViewById(R.id.noaccount);
 
+        //Toast message asking user to login or telling user that he logged in
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -48,6 +51,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         };
 
+        //login button click listener instructions asking user to enter password or email in case he left the boxes empty or in case he entered them wrong
         loginbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

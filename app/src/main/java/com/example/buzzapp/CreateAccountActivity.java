@@ -26,7 +26,7 @@ public class CreateAccountActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_account);
-
+        // in this java file we used firebase services to create accounts and store them to google's online servers, up899924 created a personal account for this. Through this java file the account is created and sent to google's online database so that user's email and password is stored safely in google's cloud
         mFirebaseAuth = FirebaseAuth.getInstance();
         emailId = findViewById(R.id.emailId);
         pass = findViewById(R.id.pass);

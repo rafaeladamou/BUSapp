@@ -42,6 +42,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //code for the drop down menu of the bus stops and the side menu, it get's the choices from the xml file strings, also it launches the google maps interface
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         Spinner spinner = findViewById(R.id.spinner);
@@ -57,6 +58,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         menu.setAdapter(adapter1);
         menu.setOnItemSelectedListener(this);
 
+        //here it get's the user's location
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         Location location = locationManager.getLastKnownLocation(locationManager.NETWORK_PROVIDER);
         onLocationChanged(location);
@@ -67,6 +69,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         place0 = new MarkerOptions().position(new LatLng(50.7903937,-1.0682483)).title("Destt");
         //place2 = changeMarker(50.7936502, -1.0978148);
 
+        //code for when the user selects a choice from the side menu,
         menu.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -100,6 +103,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
+        //code for when user chooses different bus stop
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
         {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
@@ -166,6 +170,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
+    //google maps api code
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -180,6 +185,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
+    //code for changing the marker's point and generating fastest walking route using google services
     public void changeMarker(double x, double y) {
         mMap.clear();
         LatLng lib = new LatLng(x,y);
@@ -197,6 +203,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
+    //method that generates the url that will be used from the google services to generate the fastest walking route using up899924's gooogle services account and api
     private String getUrl(LatLng origin, LatLng dest, String directionMode) {
         //origin
         String str_origin = "origin=" + origin.latitude + "," + origin.longitude;
@@ -224,6 +231,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
+    //this method has been commented because android studio has a problem when you get the virtual device's location. Some other lines have been commented too because of that and we manually adjusted the starting location by giving a fixed one. Although it has been tested on a real device and everything worked pefect.
     @Override
     public void onLocationChanged(Location location) {
         //double longtitude = location.getLongitude();
@@ -244,7 +252,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onProviderDisabled(String provider) {
 
     }
-
+//this method returns to the user's screen the route coloured
     @Override
     public void onTaskDone(Object... values) {
         if (currentPolyline !=null)
