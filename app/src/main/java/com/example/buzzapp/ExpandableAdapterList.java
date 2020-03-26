@@ -15,9 +15,7 @@ import org.w3c.dom.Text;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * Created by reale on 21/11/2016.
- */
+
 
 public class ExpandableAdapterList extends BaseExpandableListAdapter {
     private Context context;

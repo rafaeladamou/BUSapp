@@ -34,7 +34,7 @@
 
         <activity
             android:name=".CreateAccountActivity"
-            android:label="Create Account"></activity>
+            android:label="Create Account" />
         <activity
             android:name=".LoginActivity"
             android:label="Login">
@@ -46,9 +46,10 @@
         </activity>
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
-        <activity android:name=".HelpActivity"
-            android:label="Help"></activity>
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".HelpActivity"
+            android:label="Help" />
     </application>
 
 </manifest>

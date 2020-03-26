@@ -33,7 +33,7 @@ public class HelpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.help_page);
         Spinner menu = findViewById(R.id.menu1);
-        listView = (ExpandableListView)findViewById(R.id.expView);
+        listView = findViewById(R.id.expView);
         initData();
         listAdapter = new ExpandableAdapterList(this,listDataHeader,listHash);
         listView.setAdapter(listAdapter);
@@ -41,6 +41,7 @@ public class HelpActivity extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this, R.array.menu1, android.R.layout.simple_spinner_item);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         menu.setAdapter(adapter1);
+
 //        menu.setOnItemSelectedListener(this);
         menu.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -95,7 +96,7 @@ public class HelpActivity extends AppCompatActivity {
         listDataHeader.add("Our Timetable");
         listDataHeader.add("Alarm");
         listDataHeader.add("Contact Us");
-        listDataHeader.add("Frenquently Ask Question");
+        listDataHeader.add("Frequently Ask Question");
 
         List<String> Bus_stop = new ArrayList<>();
         Bus_stop.add("This is Expandable ListView");
