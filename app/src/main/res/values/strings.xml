@@ -42,5 +42,6 @@
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="help">Help</string>
+    <string name="about_us">About us</string>
 
 </resources>
