@@ -2,6 +2,7 @@
     <string name="app_name">My Application</string>
     <string name="title_activity_maps">Map</string>
 
+    //Choices list of bus stops drop down menu
     <string-array name="bus_stops">
         <item>University of Portsmouth</item>
         <item>Elm Grove, The Thicket</item>
@@ -16,6 +17,7 @@
         <item>Winston Churchill Avenue</item>
     </string-array>
 
+    //Choices list of the side menu
     <string-array name="menu1">
         <item> </item>
         <item>Maps</item>
