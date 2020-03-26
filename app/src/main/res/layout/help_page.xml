@@ -76,13 +76,15 @@
         <ExpandableListView
             android:id="@+id/expView"
             android:layout_width="match_parent"
-            android:layout_height="294dp"
+            android:layout_height="450dp"
             android:layout_marginTop="200sp" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="100sp"
             android:layout_below="@id/expView">
+
+
 
 
 

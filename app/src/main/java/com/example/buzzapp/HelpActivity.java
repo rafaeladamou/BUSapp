@@ -50,6 +50,37 @@ public class HelpActivity extends AppCompatActivity {
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         menu.setAdapter(adapter1);
 
+        menu.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedItem1 = parent.getItemAtPosition(position).toString();
+                if(selectedItem1.equals("Maps")){
+                    Intent i = new Intent(HelpActivity.this, MapsActivity.class);
+                    startActivity(i);
+                }
+                if(selectedItem1.equals("Settings")){
+                    Intent help = new Intent (HelpActivity.this , SettingsActivity.class);
+                    startActivity(help);
+                }
+                if(selectedItem1.equals("Help")){
+
+                }
+                if(selectedItem1.equals("Logout")){
+                    FirebaseAuth.getInstance().signOut();
+                    finish();
+                    Intent i = new Intent(HelpActivity.this, LoginActivity.class);
+                    startActivity(i);
+                }
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
 
 
 
