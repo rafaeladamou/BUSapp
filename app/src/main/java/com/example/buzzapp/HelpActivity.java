@@ -1,26 +1,21 @@
 package com.example.buzzapp;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
-import android.os.HardwarePropertiesManager;
+import android.os.Handler;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-import java.sql.Time;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -43,6 +38,12 @@ public class HelpActivity extends AppCompatActivity {
         initData();
         listAdapter = new ExpandableAdapterList(this,listDataHeader,listHash);
         listView.setAdapter(listAdapter);
+
+
+
+
+
+
 
 
 
@@ -93,6 +94,8 @@ public class HelpActivity extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
     }
+
+
 
 
 
